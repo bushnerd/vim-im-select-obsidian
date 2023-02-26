@@ -124,6 +124,7 @@ export default class VimImPlugin extends Plugin {
 	switchToInsert() {
 		const { exec } = require('child_process');
 		let switchToInsert: string;
+        this.currentInsertIM = "2052";
 		if (this.currentInsertIM) {
 			switchToInsert = this.isWinPlatform ?
 				this.settings.windowsSwitchCmd.replace(/{im}/, this.currentInsertIM) :
